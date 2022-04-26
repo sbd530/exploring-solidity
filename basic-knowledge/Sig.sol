@@ -35,6 +35,7 @@ contract VerifySig {
         return ecrecover(_ethSignedMessageHash, v, r, s);
     }
 
+    //* 서명을 r, s, v로 쪼갠다.
     function _split(bytes memory _sig) internal pure returns (bytes32 r, bytes32 s, uint8 v) {
         //* 32bytes(bytes32) + 32bytes(bytes32) + 1byte(uint8) == 65 bytes
         require(_sig.length == 65, "invalid signature length");
