@@ -1,15 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.10;
 
-interface IERC20 {
-    function transfer(address, uint256) external returns (bool);
-
-    function transferFrom(
-        address,
-        address,
-        uint256
-    ) external returns (bool);
-}
+import "./IERC20.sol";
 
 contract CrowdFund {
     event Launch(
