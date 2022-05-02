@@ -15,4 +15,6 @@ ganache-cli \
 ```shell
 # test Swap tokens
 npx truffle test --network mainnet_fork test/test-uniswap.js
+# test Liquidity
+npx truffle test --network mainnet_fork test/test-uniswap-liquidity.js
 ```
