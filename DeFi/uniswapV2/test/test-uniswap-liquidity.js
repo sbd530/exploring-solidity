@@ -17,13 +17,14 @@ contract("TestUniswapLiquidity", (accounts) => {
     let contract;
     let tokenA;
     let tokenB;
-
     beforeEach(async () => {
-        tokenA = await IERC20.at(TOKEN_A);
+        //* deploy
         tokenB = await IERC20.at(TOKEN_B);
+        tokenA = await IERC20.at(TOKEN_A);
+
         contract = await TestUniswapLiquidity.new();
 
-        // send ETH to cover tx fee
+        //* send ETH to cover tx fee
         await sendEther(web3, accounts[0], TOKEN_A_WHALE, 1);
         await sendEther(web3, accounts[0], TOKEN_B_WHALE, 1);
 
