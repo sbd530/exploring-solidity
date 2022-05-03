@@ -21,4 +21,6 @@ npx ganache-cli \
 npx truffle test --network mainnet_fork test/test-uniswap.js
 # test Liquidity
 npx truffle test --network mainnet_fork test/test-uniswap-liquidity.js
+# test chainlink
+env $(cat .example.env) npx truffle test --network mainnet_fork test/test-chainlink.js
 ```
