@@ -19,8 +19,8 @@ contract("TestUniswapLiquidity", (accounts) => {
     let tokenB;
     beforeEach(async () => {
         //* deploy
-        tokenB = await IERC20.at(TOKEN_B);
         tokenA = await IERC20.at(TOKEN_A);
+        tokenB = await IERC20.at(TOKEN_B);
 
         contract = await TestUniswapLiquidity.new();
 

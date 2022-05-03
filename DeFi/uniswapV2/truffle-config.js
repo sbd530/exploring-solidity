@@ -37,8 +37,8 @@ module.exports = {
   networks: {
     mainnet_fork: {
       host: "127.0.0.1", // Localhost (default: none)
-      port: 7545, // Standard Ethereum port (default: none)
-      network_id: "999", // Any network (default: none)
+      port: 8545, // Standard Ethereum port (default: none)
+      network_id: "1", // Any network (default: none)
     },
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
