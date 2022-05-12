@@ -20,6 +20,7 @@ function App() {
   const [contract, setContract] = useState({})
 
   const web3Handler = async () => {
+    // Metamask injects 'window.ethereum' Object
     let accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
     setAccount(accounts[0])
 
@@ -38,7 +39,6 @@ function App() {
     loadContract(signer)
   }
   const loadContract = async (signer) => {
-
     // Get deployed copy of Decentratwitter contract
     const contract = new ethers.Contract(DecentratwitterAddress.address, DecentratwitterAbi.abi, signer)
     setContract(contract)
